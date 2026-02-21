@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 004-insert-roles
+      author: Vitali
+      changes:
+        - sql:
+            dbms: postgresql
+            sql: |
+              INSERT INTO roles (id, name) VALUES (gen_random_uuid(), 'ROLE_ADMIN') ON CONFLICT (name) DO NOTHING;
+              INSERT INTO roles (id, name) VALUES (gen_random_uuid(), 'ROLE_USER') ON CONFLICT (name) DO NOTHING;

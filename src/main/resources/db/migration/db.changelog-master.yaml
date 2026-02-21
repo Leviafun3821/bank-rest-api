@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - include:
+      file: db/migration/changelog/001-create-users-table.yaml
+      relativeToChangelogFile: false
+  - include:
+      file: db/migration/changelog/002-create-roles-table.yaml
+      relativeToChangelogFile: false
+  - include:
+      file: db/migration/changelog/003-create-cards-table.yaml
+      relativeToChangelogFile: false
+  - include:
+      file: db/migration/changelog/004-insert-roles.yaml
+      relativeToChangelogFile: false
+  - include:
+      file: db/migration/changelog/005-create-transfers-table.yaml
+      relativeToChangelogFile: false
